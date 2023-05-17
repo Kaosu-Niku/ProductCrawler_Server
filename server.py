@@ -32,14 +32,14 @@ def get_yahoo_data(keyword):
     return yahooData
 
 
-@app.route('/')
-def index():
-    return send_from_directory('static', 'index.html')
+# @app.route('/')
+# def index():
+#     return send_from_directory('static', 'index.html')
 
-# 設置靜態文件路徑
-@app.route('/static/<path:path>')
-def send_static(path):
-    return send_from_directory('static', path)
+# # 設置靜態文件路徑
+# @app.route('/static/<path:path>')
+# def send_static(path):
+#     return send_from_directory('static', path)
 
 
 if __name__ == '__main__':
