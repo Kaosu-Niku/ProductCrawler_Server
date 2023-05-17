@@ -1,1 +1,6 @@
 # ProductCrawler_Server
+
+金鑰1:
+AKIAW3KNTKMMU7PHMVEB
+金鑰2:
+mvB7pn0PwC9JJLIkURQspqkpTGFvCUKO0NeDEdzk
