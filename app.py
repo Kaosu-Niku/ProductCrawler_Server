@@ -12,6 +12,9 @@ def index():
 def get_momo_data(keyword):
     crawlerRunner = CR.Runner()
     momoData = crawlerRunner.momoCrawler(keyword)
+    res = app.response_class()
+    res.headers['Content-Type'] = 'application/json'
+    res.headers['charset'] = 'utf-8'
     return momoData
 
 @app.route('/search/pchome/keyword=<keyword>')
@@ -19,6 +22,9 @@ def get_momo_data(keyword):
 def get_pchome_data(keyword):
     crawlerRunner = CR.Runner()
     pchomeData = crawlerRunner.pchomeCrawler(keyword)
+    res = app.response_class()
+    res.headers['Content-Type'] = 'application/json'
+    res.headers['charset'] = 'utf-8'
     return pchomeData
 
 @app.route('/search/yahoo/keyword=<keyword>')
@@ -26,6 +32,9 @@ def get_pchome_data(keyword):
 def get_yahoo_data(keyword):
     crawlerRunner = CR.Runner()
     yahooData = crawlerRunner.yahooCrawler(keyword)
+    res = app.response_class()
+    res.headers['Content-Type'] = 'application/json'
+    res.headers['charset'] = 'utf-8'
     return yahooData
 
 # # 設置靜態文件路徑
