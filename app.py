@@ -1,7 +1,10 @@
 from flask import Flask, jsonify, send_from_directory, render_template ,url_for
 import CrawlerRunner as CR
+from flask_cors import CORS
 
 app = Flask(__name__, static_url_path='/',static_folder='./static')
+
+CORS(app)
 
 @app.route('/')
 def index():
