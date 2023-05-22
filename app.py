@@ -15,21 +15,27 @@ def index():
 def get_momo_data(keyword):
     crawlerRunner = CR.Runner()
     momoData = crawlerRunner.momoCrawler(keyword)
-    return  jsonify(momoData) 
+    res = app.make_response(momoData)
+    res.headers['Content-Type'] = 'application/json'
+    return res
 
 @app.route('/search/pchome/keyword=<keyword>')
 
 def get_pchome_data(keyword):
     crawlerRunner = CR.Runner()
     pchomeData = crawlerRunner.pchomeCrawler(keyword)
-    return jsonify(pchomeData)
+    res = app.make_response(pchomeData)
+    res.headers['Content-Type'] = 'application/json'
+    return res
 
 @app.route('/search/yahoo/keyword=<keyword>')
 
 def get_yahoo_data(keyword):
     crawlerRunner = CR.Runner()
     yahooData = crawlerRunner.yahooCrawler(keyword)
-    return jsonify(yahooData)
+    res = app.make_response(yahooData)
+    res.headers['Content-Type'] = 'application/json'
+    return res
 
 # # 設置靜態文件路徑
 # @app.route('/static/<path:path>')
